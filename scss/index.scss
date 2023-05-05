@@ -1,0 +1,14 @@
+$font-stack-abril: 'Abril Fatface', cursive;
+$font-stack-lato: 'Lato', sans-serif;
+
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-light-grey: #F6F6FB;
+$color-grey: #46464682;
+$color-dark-grey: #888888;
+$color-green: #3EFFB5;
+
+h3 {
+    font-family: $font-stack-abril;
+    color: $color-light-grey;
+}
