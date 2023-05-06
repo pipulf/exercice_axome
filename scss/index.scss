@@ -1,5 +1,5 @@
-$font-stack-abril: 'Abril Fatface', cursive;
-$font-stack-lato: 'Lato', sans-serif;
+$font-abril: 'Abril Fatface', cursive;
+$font-lato: 'Lato', sans-serif;
 
 $color-white: #FFFFFF;
 $color-black: #000000;
@@ -8,7 +8,74 @@ $color-grey: #46464682;
 $color-dark-grey: #888888;
 $color-green: #3EFFB5;
 
-h3 {
-    font-family: $font-stack-abril;
-    color: $color-light-grey;
+@mixin font-stack($family, $weight, $size, $color) {
+    font-family: $family;
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
 }
+
+
+.rectangle-grey{
+    background-color: $color-light-grey;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 50%;
+    height: 928px;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+.green-button {
+    @include font-stack($family: $font-lato, $weight: 900, $size: 16px, $color: black);
+    background-color: $color-green;
+    border-radius: 5px;
+    padding: 18px 40px;
+    border: none;
+}
+
+body{
+}
+
+header{
+    .navigation{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    img {
+        height: 28.64px;
+    }
+
+    nav {
+        ul{
+
+            display: flex;
+
+            li{
+    
+                list-style-type:none;
+    
+                a.first{
+                    @include font-stack($family: $font-lato, $weight: 900, $size: 16px, $color: black);
+                }
+        
+                a.second{
+                    @include font-stack($family: $font-lato, $weight: 400, $size: 16px, $color: black);
+                    margin-left: 70px;
+                }
+            }
+        }
+    }
+}
+
+
