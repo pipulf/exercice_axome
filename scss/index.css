@@ -1,0 +1,350 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.green-button {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: black;
+  opacity: 1;
+  letter-spacing: normal;
+  background-color: #3EFFB5;
+  border-radius: 5px;
+  padding: 18px 40px;
+  border: none;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  padding: 50px 17% 100px 17%;
+}
+header .rectangle-grey {
+  background-color: #F6F6FB;
+  position: absolute;
+  top: 0px;
+  left: 47.5%;
+  width: 52.37%;
+  height: 928px;
+  z-index: 1;
+  opacity: 0.5;
+}
+header .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+header img {
+  height: 28.64px;
+}
+header nav {
+  width: 430px;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  list-style-type: none;
+}
+header nav ul li a.first {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  color: black;
+  opacity: 1;
+  letter-spacing: normal;
+}
+header nav ul li a.second {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
+  opacity: 1;
+  letter-spacing: normal;
+  margin-left: 70px;
+}
+
+main #presentation {
+  padding: 0px 17% 80px 17%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 100px 140px 100px 40px 40px;
+  grid-auto-rows: 1fr;
+}
+main #presentation .presentation-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #888888;
+  opacity: 1;
+  letter-spacing: 2.88px;
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  align-items: flex-end;
+}
+main #presentation .presentation-subtitle {
+  font-family: "Abril Fatface", cursive;
+  font-weight: normal;
+  font-size: 54px;
+  color: #000000;
+  opacity: 1;
+  letter-spacing: normal;
+  grid-column: 1/3;
+  grid-row: 2;
+  z-index: 3;
+}
+main #presentation .presentation-subtitle p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+main #presentation .presentation-text {
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #000000;
+  opacity: 0.7;
+  letter-spacing: normal;
+  grid-column: 1;
+  grid-row: 3;
+}
+main #presentation .presentation-actions {
+  margin-top: 25px;
+  grid-column: 1/3;
+  grid-row: 4;
+  display: flex;
+  align-items: center;
+}
+main #presentation .presentation-actions .see-videos {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+main #presentation .presentation-actions .see-videos img {
+  width: 29px;
+  height: 29px;
+  margin-right: 10px;
+}
+main #presentation .presentation-actions .see-videos span {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  color: #000000;
+  opacity: 1;
+  letter-spacing: normal;
+}
+main #presentation .presentation-picture {
+  grid-column: 2;
+  grid-row: 1/6;
+  z-index: 2;
+  text-align: end;
+  box-shadow: -7px 120px 50px 0px rgba(70, 70, 70, 0.5);
+}
+main #presentation .presentation-picture img {
+  width: 775px;
+  height: 526px;
+}
+main #scroll-down {
+  padding: 100px 17% 170px 17%;
+  display: flex;
+  align-items: center;
+}
+main #scroll-down img {
+  width: 40px;
+  height: 40px;
+}
+main #scroll-down .scroll-down-text {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  color: #000000;
+  opacity: 1;
+  letter-spacing: normal;
+}
+main #about-us {
+  padding: 0px 21.75% 80px 17%;
+  display: flex;
+  align-items: center;
+}
+main #about-us img {
+  margin-right: 87px;
+  width: 503px;
+  height: 541px;
+}
+main #about-us .about-us-description {
+  padding-left: 40px;
+  padding-bottom: 18px;
+}
+main #about-us .about-us-description .about-us-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #888888;
+  opacity: 1;
+  letter-spacing: 2.88px;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+main #about-us .about-us-description .about-us-subtitle {
+  font-family: "Abril Fatface", cursive;
+  font-weight: normal;
+  font-size: 32px;
+  color: #000000;
+  opacity: 1;
+  letter-spacing: normal;
+  margin-bottom: 20px;
+}
+main #about-us .about-us-description .about-us-text {
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #000000;
+  opacity: 0.7;
+  letter-spacing: normal;
+  margin-bottom: 30px;
+}
+main #best-menu {
+  padding: 100px 17% 0px 17%;
+  background-color: #F6F6FB;
+}
+main #best-menu .swiper {
+  padding-bottom: 80px;
+}
+main #best-menu .swiper .best-menu-title {
+  text-align: center;
+  margin-top: 0;
+}
+main #best-menu .swiper .best-menu-subtitle {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+main #best-menu .swiper .best-menu-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: #888888;
+  opacity: 1;
+  letter-spacing: 2.88px;
+}
+main #best-menu .swiper .best-menu-subtitle {
+  font-family: "Abril Fatface", cursive;
+  font-weight: normal;
+  font-size: 32px;
+  color: #000000;
+  opacity: 1;
+  letter-spacing: normal;
+}
+main #best-menu .swiper .swiper-wrapper .swiper-slide img {
+  border-radius: 10px;
+}
+main #best-menu .swiper .swiper-wrapper .swiper-slide .slide-informations {
+  width: 398px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  position: relative;
+  top: -10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+main #best-menu .swiper .swiper-wrapper .swiper-slide .slide-informations p {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+main #best-menu .swiper .swiper-wrapper .swiper-slide .slide-informations p.slide-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  color: #000000;
+  opacity: 1;
+  letter-spacing: normal;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+main #best-menu .swiper .swiper-wrapper .swiper-slide .slide-informations p.slide-text {
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #000000;
+  opacity: 0.7;
+  letter-spacing: normal;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+main #best-menu .swiper .swiper-wrapper .swiper-slide .slide-informations p.slide-link {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  color: #000000;
+  opacity: 1;
+  letter-spacing: normal;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+main #best-menu .swiper-button-next::after, main #best-menu .swiper-button-prev::after {
+  content: "";
+}
+main #best-menu .swiper-button-prev {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  left: 1100px;
+  top: 38px;
+}
+main #best-menu .swiper-button-next {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  transform: rotate(180deg);
+  left: 1190px;
+}
+
+footer {
+  margin-top: 60px;
+  padding: 0px 21.75% 80px 17%;
+  display: flex;
+}
+footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+footer div p {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: black;
+  opacity: 1;
+  letter-spacing: normal;
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-right: 22px;
+  width: 292px;
+}
+footer div ul {
+  display: flex;
+  flex-direction: column;
+}
+footer div ul li {
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #000000;
+  opacity: 0.7;
+  letter-spacing: normal;
+  margin-bottom: 20px;
+}/*# sourceMappingURL=index.css.map */
