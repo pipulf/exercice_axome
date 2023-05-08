@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 $font-abril: 'Abril Fatface', cursive;
 $font-lato: 'Lato', sans-serif;
 
@@ -28,59 +32,66 @@ a{
 }
 
 .green-button {
-    @include font-stack($family: $font-lato, $weight: 700, $size: 16px, $color: black);
+    @include font-stack($family: $font-lato, $weight: 700, $size: 1rem, $color: black);
     background-color: $color-green;
-    border-radius: 5px;
-    padding: 18px 40px;
+    border-radius: 0.31em;
+    padding: 1.125rem 2.5em;
     border: none;
+    cursor: pointer;
+    transition: all 0.8s, color 0.3s 0.3s;
+}
+
+.green-button:hover {
+    box-shadow: 0 5rem 0 0 rgba(0,0,0,0.15) inset, 0 -5rem 0 0 rgba(0,0,0,0.155) inset;
 }
 
 body{
-    margin: 0;
-}
-
-header{
-    padding:50px 17% 100px 17%;
+    width: 100%;
+    margin: 0 ;
+    position: relative;
 
     .rectangle-grey{
         background-color: $color-light-grey;
         position: absolute;
-        top: 0px;
-        left: 47.5%;
-        width: 52.37%;
-        height: 928px;
-        z-index: 1;
+        top: 0;
+        right: 0;
+        width: 52vw;
+        height: 58rem;
+        z-index: -1;
         opacity: 0.5;
     }
+}
+
+header{
+    padding: 4rem 11.34rem 99px 11.34rem;
 
     .navigation{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: relative;
-        z-index: 2;
     }
 
     img {
-        height: 28.64px;
+        width: 9.62em;
+        height: 1.875em;
     }
 
     nav {
-        width: 430px;
+        width:430px;
 
         ul{
             display: flex;
+            justify-content: space-between;
+            align-items: center;
 
             li{
                 list-style-type:none;
-    
-                a.first{
-                    @include font-stack($family: $font-lato, $weight: 900, $size: 16px, $color: black);
-                }
 
-                a.second{
-                    @include font-stack($family: $font-lato, $weight: 400, $size: 16px, $color: black);
-                    margin-left: 70px;
+                a{
+                    @include font-stack($family: $font-lato, $weight: 400, $size: 1rem, $color: black);
+                    &.active, &:hover{
+                        font-weight: bold;
+                    }
                 }
             }
         }
@@ -88,96 +99,109 @@ header{
 }
 
 main{
-
     #presentation {
-        padding:0px 17% 80px 17%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 100px 140px 100px 40px 40px;
-        grid-auto-rows: 1fr;
+        padding: 0 11.34rem;
+        display: flex;
+        justify-content: space-between;
 
-        .presentation-title{
-            @include font-stack($family: $font-lato, $weight: 700, $size: 18px, $color: $color-dark-grey, $letterSpacing: 2.88px);
-            grid-column: 1;
-            grid-row: 1;
-            display: flex;
-            align-items: flex-end;            
+        p{
+            margin: 0;
         }
-        .presentation-subtitle{
-            @include font-stack($family: $font-abril, $weight: normal, $size: 54px, $color: $color-black);
-            grid-column: 1 / 3;
-            grid-row: 2;
-            z-index: 3;
 
-            p{
-                margin-top: 0px;
-                margin-bottom: 0px;
+        .presentation-description{
+            display: flex;
+            flex-direction: column;
+            margin-top: 45px;
+            z-index: 1;
+
+            .presentation-title{
+                @include font-stack($family: $font-lato, $weight: 700, $size: 1.125em, $color: $color-dark-grey, $letterSpacing: 0.18em);
+                margin-bottom: 30px;
             }
-        }
-        .presentation-text{
-            @include font-stack($family: $font-lato, $weight: normal, $size: 16px, $color: $color-black, $opacity: 0.7);
-            grid-column: 1;
-            grid-row: 3;
-        }
-        .presentation-actions{
-            margin-top: 25px;
-            grid-column: 1 / 3;
-            grid-row: 4;
-            display: flex;
-            align-items: center;
-
-            .see-videos{
+    
+            .presentation-subtitle{
+                @include font-stack($family: $font-abril, $weight: normal, $size: 3.375em, $color: $color-black);
+                width: 668px;
+                margin-bottom: 20px;
+            }
+    
+            .presentation-text{
+                @include font-stack($family: $font-lato, $weight: normal, $size: 1em, $color: $color-black, $opacity: 0.7);
+                margin-bottom: 30px;
+            }
+        
+            .presentation-actions{
                 display: flex;
                 align-items: center;
-                margin-left: 40px;
-
-                img{
-                    width: 29px;
-                    height: 29px;
-                    margin-right: 10px;
+    
+                .see-videos{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 2.5rem;
+    
+                    img {
+                        width: 1.81rem;
+                        height: 1.81rem;
+                        margin-right: 0.625rem;
+                        cursor: pointer;
+                        transition: transform 0.3s ease-out;
+                      }
+                    
+                      &:hover {
+                        img {
+                          transform: scale(1.4);
+                        }
+                      }
+    
+                    span{
+                        @include font-stack($family: $font-lato, $weight: 900, $size: 1rem, $color: $color-black);
+                    }
                 }
-                span{
-                    @include font-stack($family: $font-lato, $weight: 900, $size: 16px, $color: $color-black);
-                }
-            }
+            }  
         }
+
         .presentation-picture{
-            grid-column: 2;
-            grid-row: 1 / 6;
-            z-index: 2;
-            text-align: end;
-            box-shadow:-7px 120px 50px 0px rgba(70, 70, 70, 0.5);
+            position: relative;
+            height: 526px;
 
             img{
-                width: 775px;
-                height: 526px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 754px;
+                height: auto;
+                box-shadow: -1.19rem 1.25rem 3.125rem rgba(0, 0, 0, 0.3);
             }
         }
     }
 
     #scroll-down{
-        padding:100px 17% 170px 17%;
+        padding: 101px 11.34rem 0 11.34rem;
         display: flex;
         align-items: center;
 
         img{
-            width: 40px;
-            height: 40px;
+            width: 2.5rem;
+            height: 2.5rem;
         }
         .scroll-down-text{
-            @include font-stack($family: $font-lato, $weight: 900, $size: 16px, $color: $color-black);
+            @include font-stack($family: $font-lato, $weight: 900, $size: 1rem, $color: $color-black);
         }
     }
 
     #about-us{
-        padding:0px 21.75% 80px 17%;
+        padding: 169px 11.34rem 80px 11.34rem;
         display: flex;
         align-items: center;
 
-        img{
-            margin-right: 87px;
-            width: 503px;
+        .about-us-picture{
+            width:503px;
             height: 541px;
+            background-image: url("/ressources/img/about-us.jpg");
+            background-size: cover;
+            background-position: center;
+            border-radius: 29px;
+            margin-right: 87px;
         }
 
         .about-us-description{
@@ -185,29 +209,30 @@ main{
             padding-bottom: 18px;
 
             .about-us-title{
-                @include font-stack($family: $font-lato, $weight: 700, $size: 18px, $color: $color-dark-grey, $letterSpacing: 2.88px);
+                @include font-stack($family: $font-lato, $weight: 700, $size: 1.125rem, $color: $color-dark-grey, $letterSpacing: 0.18rem);
                 margin-bottom: 30px;
                 margin-top: 0;
             }
 
             .about-us-subtitle{
-                @include font-stack($family: $font-abril, $weight: normal, $size: 32px, $color: $color-black);
+                @include font-stack($family: $font-abril, $weight: normal, $size: 2rem, $color: $color-black);
                 margin-bottom: 20px;
             }
 
             .about-us-text{
-                @include font-stack($family: $font-lato, $weight: normal, $size: 16px, $color: $color-black, $opacity: 0.7);
+                @include font-stack($family: $font-lato, $weight: normal, $size: 1rem, $color: $color-black, $opacity: 0.7);
                 margin-bottom: 30px;
             }
         }
     }
 
     #best-menu{
-        padding:100px 17% 0px 17%;
+        padding: 100px 11.34rem 80px 11.34rem;
         background-color: $color-light-grey;
 
         .swiper{
-            padding-bottom: 80px;
+            position: relative;
+            margin-bottom: 40px;
 
             .best-menu-title{
                 text-align: center;
@@ -215,99 +240,117 @@ main{
 
             }
             .best-menu-subtitle{
-                margin-top: 20px;
-                margin-bottom: 60px;
+                margin-top: 1.25rem;
+                margin-bottom: 3.75rem;
                 text-align: center;
             }
             .best-menu-title{
-                @include font-stack($family: $font-lato, $weight: 900, $size: 18px, $color: $color-dark-grey, $letterSpacing: 2.88px);
+                @include font-stack($family: $font-lato, $weight: 900, $size: 1.125rem, $color: $color-dark-grey, $letterSpacing: 0.18rem);
             }
             .best-menu-subtitle{
-                @include font-stack($family: $font-abril, $weight: normal, $size: 32px, $color: $color-black);
+                @include font-stack($family: $font-abril, $weight: normal, $size: 2rem, $color: $color-black);
             }
             .swiper-wrapper{
                 .swiper-slide{
-                    img{
-                        border-radius: 10px;
+                    width: 398px;
+                    cursor: pointer;
+
+                    .swiper-image{
+                        position: relative;
+                        width: 100%;
+                        height: 0;
+                        padding-bottom: 56.25%;
+            
+                        img{
+                            border-radius: 0.625rem;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
 
                     .slide-informations{
-                        width: 398px;
                         background-color: $color-white;
-                        border-radius: 10px;
+                        border-radius: 0.625rem;
                         position: relative;
-                        top: -10px;
+                        top: -0.625rem;
                         display: flex;
                         flex-direction: column;
                         justify-content: start;
-                        padding-top: 40px;
-                        padding-bottom: 40px;
+                        padding-top: 2.5rem;
+                        padding-bottom: 2.5rem;
 
                         p{
-                            padding-left: 40px;
-                            padding-right: 40px;
+                            padding-left: 2.5rem;
+                            padding-right: 2.5rem;
                         }
 
                         p.slide-title{
-                            @include font-stack($family: $font-lato, $weight: 900, $size: 24px, $color: $color-black);
+                            @include font-stack($family: $font-lato, $weight: 900, $size: 1.5rem, $color: $color-black);
                             margin-top: 0;
-                            margin-bottom: 20px;
+                            margin-bottom: 1.25rem;
                         }
 
                         p.slide-text{
-                            @include font-stack($family: $font-lato, $weight: normal, $size: 16px, $color: $color-black, $opacity: 0.7);
+                            @include font-stack($family: $font-lato, $weight: normal, $size: 1rem, $color: $color-black, $opacity: 0.7);
                             margin-top: 0;
-                            margin-bottom: 30px;
+                            margin-bottom: 1.875rem;
                         }
 
                         p.slide-link{
-                            @include font-stack($family: $font-lato, $weight: 900, $size: 16px, $color: $color-black);
+                            @include font-stack($family: $font-lato, $weight: 900, $size: 1rem, $color: $color-black);
                             margin-top: 0;
                             margin-bottom: 0;
                         }
                     }
                 }
-
             }
         }
 
-        .swiper-button-next::after, .swiper-button-prev::after {
-            content: "";
-        }
+        .swiper-buttons{
+            display: flex;
+            align-items: center;
+            justify-content: end;
 
-        .swiper-button-prev{
-            width: 60px;
-            height: 60px;
-            position: relative;
-            left: 1100px;
-            top: 38px;
-        }
-        .swiper-button-next{
-            position: relative;
-            width: 60px;
-            height: 60px;
-            transform: rotate(180deg);
-            left: 1190px;
+            .prev{
+                position: static;
+                height: 60px;                
+                width: 60px;
+                margin-right: 36px;
+                cursor: pointer;
+            }
+            .next{
+                position: static;
+                transform: rotate(180deg);
+                height: 60px;                
+                width: 60px;
+                cursor: pointer;
+            }
         }
     }
 }
 
 footer {
-    margin-top: 60px;
-    padding:0px 21.75% 80px 17%;
+    padding: 60px 11.34rem 75px 11.34rem;
     display: flex;
+    justify-content: start;
+    justify-content: space-between;
 
     div{
         display: flex;
         flex-direction: column;
         align-items: start;
+        width:293px;
 
-        p{
-            @include font-stack($family: $font-lato, $weight: 700, $size: 24px, $color: black);
+        span{
             margin-top: 0;
-            margin-bottom: 30px;
-            margin-right: 22px;
-            width: 292px;
+            margin-bottom: 1.875rem;
+
+            a{
+                @include font-stack($family: $font-lato, $weight: 700, $size: 1.5rem, $color: black);
+            }
         }
 
         ul{
@@ -315,8 +358,15 @@ footer {
             flex-direction: column;
             
             li{
-                @include font-stack($family: $font-lato, $weight: normal, $size: 16px, $color: $color-black, $opacity: 0.7);
-                margin-bottom: 20px;
+                @include font-stack($family: $font-lato, $weight: normal, $size: 1rem, $color: $color-black, $opacity: 0.7);
+                margin-bottom: 1.25rem;
+
+                a{
+                    @include font-stack($family: $font-lato, $weight: 400, $size: 1rem, $color: black);
+                    &:hover{
+                        font-weight: bold;
+                    }
+                }
             }
         }
     }

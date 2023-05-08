@@ -7,7 +7,6 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="scss/index.css">
@@ -16,50 +15,51 @@
     <title>Exercice</title>
 </head>
 <body>
+    
+    <div class="rectangle-grey"></div>
+
     <header>
         <div class="navigation">
             <img class="logo-axome" src="ressources/svg/logo-axome.svg" alt="Axome company logo">    
             <nav class="menu">
                 <ul>
-                  <li><a class="first" href="#Home">Home</a></li>
-                  <li><a class="second" href="#About">About</a></li>
-                  <li><a class="second" href="#Gallery">Gallery</a></li>
-                  <li><a class="second" href="#Testimonial">Testimonial</a></li>
+                  <li><a class="active" href="#Home">Home</a></li>
+                  <li><a href="#about-us">About</a></li>
+                  <li><a href="#best-menu">Gallery</a></li>
+                  <li><a href="#">Testimonial</a></li>
                 </ul>
             </nav>
             <button class="green-button" type="button">Contact</button>
         </div>
-        <div class="rectangle-grey"></div>
     </header>
 
     <main>
+
         <div id="presentation">
-            <div class="presentation-title">
-                <p>RESTAURANT</p>
-            </div>
-            <div class="presentation-subtitle">
-                <p>Enjoy a good experience </br> at our restaurant</p>
-            </div>
-            <div class="presentation-text">
-                <p>We make other people enjoy and give happiness in our </br> restaurant. Come here and relax with your family and </br> loved ones.</p>
-            </div>
-            <div class="presentation-actions">
-                <button class="green-button" type="button">Best Menu</button>
-                <div class="see-videos">
-                    <img class="videos-icon" src="ressources/svg/video.svg" alt="Arrow right icon">
-                    <span>See Videos</span>
+            <div class="presentation-description">
+                <span class="presentation-title">RESTAURANT</span>
+                <span class="presentation-subtitle">Enjoy a good experience </br> at our restaurant</span>
+                <p class="presentation-text">We make other people enjoy and give happiness in our </br> restaurant. Come here and relax with your family and </br> loved ones.</p>
+                <div class="presentation-actions">
+                    <button class="green-button" type="button">Best Menu</button>
+                    <div class="see-videos">
+                        <img class="videos-icon" src="ressources/svg/video.svg" alt="Arrow right icon"/>
+                        <span>See Videos</span>
+                    </div>
                 </div>
             </div>
             <div class="presentation-picture">
-                <img src="ressources/img/header.jpg" alt="A plate with food and cutlery">
+                <img src="/ressources/img/header.jpg" alt="restaurant"/>
             </div>
         </div>
+
         <div id="scroll-down">
             <img src="ressources/svg/nav-arrow-down.svg" alt="Down arrow inviting to scroll">
             <span class="scroll-down-text">Scroll Down For More</span>
         </div>
+
         <div id="about-us">
-            <img src="ressources/img/about-us.jpg" alt="A plate with food and cutlery">
+            <div class="about-us-picture"></div>
             <div class="about-us-description">
                 <p class="about-us-title">ABOUT US</p>
                 <p class="about-us-subtitle">The Best restaurant </br> in the city</p>
@@ -71,25 +71,30 @@
                 </p>
                 <button class="green-button" type="button">Find Out More</button>
             </div>
-
         </div>
+
         <div id="best-menu">
             <div class="swiper">
+
                 <p class="best-menu-title">BEST MENU</p>
                 <p class="best-menu-subtitle">Best food menu in restaurant</p>
-                <!-- Additional required wrapper -->
+
                 <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide">
-                    <img src="ressources/img/article-1.jpg" alt="A plate with food">
-                    <div class="slide-informations">
-                        <p class="slide-title">Fresh Salad</p>
-                        <p class="slide-text">New food and concent interest. best </br> food meun in the city,people....</p>
-                        <p class="slide-link">Read more</p>
-                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-image">
+                            <img src="ressources/img/article-1.jpg" alt="A plate with food">
+                        </div>
+                        <div class="slide-informations">
+                            <p class="slide-title">Fresh Salad</p>
+                            <p class="slide-text">New food and concent interest. best </br> food meun in the city,people....</p>
+                            <p class="slide-link">Read more</p>
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="ressources/img/article-2.jpg" alt="A plate with food">
+                        <div class="swiper-image">
+                            <img src="ressources/img/article-2.jpg" alt="A plate with food">
+
+                        </div>
                         <div class="slide-informations">
                             <p class="slide-title">Fruits Salad</p>
                             <p class="slide-text">New food and concent interest. best </br> food menu in the city,peo....</p>
@@ -97,7 +102,10 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="ressources/img/article-3.jpg" alt="A plate with food">
+                        <div class="swiper-image">
+                            <img src="ressources/img/article-3.jpg" alt="A plate with food">
+
+                        </div>
                         <div class="slide-informations">
                             <p class="slide-title">Soft mix Salad</p>
                             <p class="slide-text">New food and concent interest. best </br> food meu....</p>
@@ -105,48 +113,45 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-prev">
-                    <img src="ressources/svg/nav-arrow-left.svg" alt="left slide change button">
-                </div>
-                <div class="swiper-button-next">
-                    <img src="ressources/svg/nav-arrow-left.svg" alt="right slide change button">
-                </div>
+            </div>
+            <div class="swiper-buttons">
+                <img class="prev" src="ressources/svg/nav-arrow-left.svg" alt="left slide change button">
+                <img class="next" src="ressources/svg/nav-arrow-left.svg" alt="right slide change button">
             </div>
         </div>
     </main>
 
     <footer>
         <div>
-            <p>Get’s your discount</p>
+            <span><a class="general" href="#">Get’s your discount</a></span>
             <ul>
-                <li>Check now !</li>
+                <li><a href="#">Check now !</a></li>
             </ul>
         </div>
         <div>
-            <p>Our services</p>
+            <span><a class="general" href="#">Our services</a></span>
             <ul>
-                <li>Collection</li>
-                <li>How it work</li>
-                <li>Estimats</li>
+                <li><a href="#">Collection</a></li>
+                <li><a href="#">How it work</a></li>
+                <li><a href="#">Estimats</a></li>
             </ul>
         </div>
         <div>
-            <p>Company</p>
+            <span><a class="general" href="#">Company</a></span>
             <ul>
-                <li>Terms of use</li>
-                <li>Privacy policy</li>
-                <li>Careers</li>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Careers</a></li>
             </ul>
         </div>
         <div>
-            <p>Contact</p>
+            <span><a class="general" href="#">Contact</a></span>
             <ul>
                 <li>dev@axome.com</li>
                 <li>(888) 315-500</li>
                 <li>St Village, New York</li>
             </ul>
         </div>
-    
     </footer>
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
@@ -156,13 +161,13 @@
     direction: 'horizontal',
     slidesPerView: 3,
     centeredSlides: true,
-    spaceBetween: 30,
+    spaceBetween: 22,
     loop: true,
-  
+
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.next',
+      prevEl: '.prev',
     },
   
   });
